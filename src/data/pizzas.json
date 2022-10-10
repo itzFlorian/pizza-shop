@@ -1,47 +1,52 @@
 [
   {
     "pizza": "Margherita",
-    "portion":[
-      {"size":"s", "price": 5},
-      {"size":"m", "price": 6},
-      {"size":"l", "price": 7.5}
-    ],
+    "size": "m",
+    "price":{
+      "s": 5,
+      "m": 6,
+      "l": 7.5
+    },
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgoldbelly.imgix.net%2Fuploads%2Fproduct_image%2Fimage%2F52447%2Fclassic-neapolitan-pizza-4-pack.dcc1fdf3fe402431e72dc2a0d49a2be8.jpg%3Fixlib%3Drails-3.0.2%26url_params%3D%257B%3Aw%3D%253E1200%2C%2520%3Ah%3D%253E630%2C%2520%3Afit%3D%253E%2522crop%2522%257D&f=1&nofb=1&ipt=f75e67e1d9271a2aa0bb4f71cb0e9040b369e9fc552367aa97f46e9190a383a9&ipo=images"
   },
   {
     "pizza": "Salami",
-    "portion":[
-      {"size":"s", "price": 5.50},
-      {"size":"m", "price": 6.50},
-      {"size":"l", "price": 8}
-    ],
+    "size": "m",
+    "price":{
+      "s": 5,
+      "m": 6,
+      "l": 7.5
+    },
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.readersdigest.ca%2Fwp-content%2Fuploads%2F2010%2F12%2Fpepperoni-pizza-scaled.jpg&f=1&nofb=1&ipt=ef95591eabf769c0c9b0eb0b9574974e1750d93e4ecd94fcb5fc6b6f5876e140&ipo=images"
   },
   {
     "pizza": "Tonno",
-    "portion":[
-      {"size":"s", "price": 5.50},
-      {"size":"m", "price": 5.20},
-      {"size":"l", "price": 7.75}
-    ],
+    "size": "m",
+    "price":{
+      "s": 5,
+      "m": 6,
+      "l": 7.5
+    },
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpizzasabbioni.com%2Fwp-content%2Fuploads%2F2019%2F06%2FPizza-al-Tonno-klein.jpg&f=1&nofb=1&ipt=8517eceb857023fc3fd9dd9d06f97c097661336161702b243cc1bfe95db2648a&ipo=images"
   },
   {
     "pizza": "Speciale",
-    "portion":[
-      {"size":"s", "price": 5.5},
-      {"size":"m", "price": 6.5},
-      {"size":"l", "price": 8.0}
-    ],
+    "size": "m",
+    "price":{
+      "s": 5,
+      "m": 6.50,
+      "l": 8.5
+    },
     "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fya-restaurant.com%2Fgik555%2F2017%2F07%2Fpizza-special1.jpg&f=1&nofb=1&ipt=a167f202b4b913856fc1e666efe7d4bf88f8f1e911311f588df62105fd1956f2&ipo=images"
   },
   {
     "pizza": "Pepperoni",
-    "portion":[
-      {"size":"s", "price": 5.5},
-      {"size":"m", "price": 6.5},
-      {"size":"l", "price": 8}
-    ],
+    "size": "m",
+    "price":{
+      "s": 5,
+      "m": 7,
+      "l": 8.5
+    },
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cooksifu.com%2Fwp-content%2Fuploads%2F2019%2F03%2FPepperoni-pizza.jpg&f=1&nofb=1&ipt=ab31a8eb7e78c0e98e17107440f7a27e4929a16cc0332ea76a43f76b9e5186e5&ipo=images"
   }
 ]
