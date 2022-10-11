@@ -3,9 +3,8 @@ import { useContext} from "react";
 
 const ShoppingCart = () => {
   const [cart] = useContext(CartContext)
-  const prices = cart.map(item =>{
-    return item.price[item.size]
-  })
+  const prices = cart.map(item => item.price[item.size])
+  const sum = prices.reduce((num1, num2) => (num1+num2))
    return cart.length > 0 ? (    
     <>
       <h1>Here is your Order</h1>
@@ -19,9 +18,7 @@ const ShoppingCart = () => {
           </div>
         )
       })}
-      <h2>Total: {prices.reduce((num1, num2)=>{
-        return (num1+num2)
-      })} €</h2>      
+      <h2>Total: {sum.toFixed(2)} €</h2>      
     </> 
   ): <h1>Cart is empty</h1>
 };
