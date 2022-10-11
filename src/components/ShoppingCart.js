@@ -4,7 +4,7 @@ import { useContext} from "react";
 const ShoppingCart = () => {
   const [cart] = useContext(CartContext)
   const prices = cart.map(item => item.price[item.size])
-  const sum = prices.reduce((num1, num2) => (num1+num2))
+  const sum = prices.length === 0 ? null : prices.reduce((num1, num2) => (num1+num2))
    return cart.length > 0 ? (    
     <>
       <h1>Here is your Order</h1>
