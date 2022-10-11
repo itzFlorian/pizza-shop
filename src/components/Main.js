@@ -3,6 +3,7 @@ import { useState , useContext } from "react";
 import pizzaList from "../data/pizzas.json"
 import CartContext from "../context/CartContext";
 import Search from "./Search"
+import ShowPizza from "./ShowPizza";
 
 const Main = () => {
   const [searchList, setSearchList] = useState([])
@@ -22,56 +23,17 @@ const Main = () => {
     const newCart = [...cart, pizza]
     setCart(newCart)
     console.log(newCart);
-  }
-  
+  }  
 
   return input === "" ? (
     <>
-      <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>      
-      {pizzas.map(pizza=>{
-        return (
-          <div className="pizza-container">
-            <div>
-              <h2>{pizza.pizza}</h2>
-              <img className="pizza-img" src={pizza.img} alt="pizza" />
-            </div>
-            <div className="pizza-element">
-              <select onChange={(event)=> sizeHandler(event, pizza)} id="size">
-                <option value="m">Medium</option>
-                <option value="s">Small</option>
-                <option value="l">Large</option>
-              </select>
-              <p>
-                {`${pizza.price[pizza.size]} €`}
-              </p>
-              <button type="button" onClick={(event) => cartHandler(event, pizza)} >Add to Cart</button>
-            </div>
-          </div>
-       ) })}      
+    <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>
+      {pizzas.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler}/> )}       
     </>
   ) : (    
   <>
-    <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>      
-    {searchList.map(pizza=>{
-      return (
-        <div className="pizza-container">
-          <div>
-            <h2>{pizza.pizza}</h2>
-            <img className="pizza-img" src={pizza.img} alt="pizza" />
-          </div>
-          <div className="pizza-element">
-            <select onChange={(event)=> sizeHandler(event, pizza)} id="size">
-              <option value="m">Medium</option>
-              <option value="s">Small</option>
-              <option value="l">Large</option>
-            </select>
-            <p>
-              {`${pizza.price[pizza.size]} €`}
-            </p>
-            <button type="button" onClick={(event) => cartHandler(event, pizza)} >Add to Cart</button>
-          </div>
-        </div>
-     ) })}      
+   <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>
+      {searchList.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler}/> )}   
   </>)
 };
 
