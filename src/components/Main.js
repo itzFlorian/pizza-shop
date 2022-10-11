@@ -1,9 +1,11 @@
 import "../styles/main.css"
-import { useState } from "react";
+import { useState , useContext } from "react";
 import pizzaList from "../data/pizzas.json"
+import CartContext from "../context/CartContext";
 
-const Main = (setShoppingCart, shoppingCart) => {
+const Main = () => {
   const [pizzas, setPizzas] = useState(pizzaList)
+  const [cart, setCart] = useContext(CartContext)
 
   const sizeHandler = (event, pizza) => {
     const size = event.target.value
@@ -14,8 +16,8 @@ const Main = (setShoppingCart, shoppingCart) => {
 
   const cartHandler = (event, pizza)=>{
     event.preventDefault()
-    const newCart = [...shoppingCart, pizza]
-    setShoppingCart(newCart)
+    const newCart = [...cart, pizza]
+    setCart(newCart)
     console.log(newCart);
   }
   
