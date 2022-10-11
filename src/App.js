@@ -3,17 +3,11 @@ import Contact from "./components/Contact"
 import Main from "./components/Main"
 import ShoppingCart from "./components/ShoppingCart"
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react";
-import Search from "./components/Search";
-
 
 function App() {
-
-
   return (
     <div className="App">
       <Header/>
-      <Search/>
       <Routes>
         <Route path="/" element={<Navigate to="/main"/>} />
         <Route path="/main" element={<Main />} />

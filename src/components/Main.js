@@ -2,6 +2,7 @@ import "../styles/main.css"
 import { useState , useContext } from "react";
 import pizzaList from "../data/pizzas.json"
 import CartContext from "../context/CartContext";
+import Search from "./Search"
 
 const Main = () => {
   const [pizzas, setPizzas] = useState(pizzaList)
@@ -23,7 +24,8 @@ const Main = () => {
   
 
   return (
-    <>      
+    <>
+      <Search/>      
       {pizzas.map(pizza=>{
         return (
           <div className="pizza-container">
@@ -33,9 +35,9 @@ const Main = () => {
             </div>
             <div className="pizza-element">
               <select onChange={(event)=> sizeHandler(event, pizza)} id="size">
-                <option value="m">M</option>
-                <option value="s">S</option>
-                <option value="l">L</option>
+                <option value="m">Medium</option>
+                <option value="s">Small</option>
+                <option value="l">Large</option>
               </select>
               <p>
                 {`${pizza.price[pizza.size]} €`}
