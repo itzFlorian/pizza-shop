@@ -24,20 +24,21 @@ const Main = (setShoppingCart, shoppingCart) => {
     <>      
       {pizzas.map(pizza=>{
         return (
-          <div>
-            <h2>{pizza.pizza}</h2>
-            <div className="pizza-container">
+          <div className="pizza-container">
+            <div>
+              <h2>{pizza.pizza}</h2>
               <img className="pizza-img" src={pizza.img} alt="pizza" />
-                <select onChange={(event)=> sizeHandler(event, pizza)} id="size">
-                  <option value="choose your size">choose size</option>
-                  <option value="s">S</option>
-                  <option value="m">M</option>
-                  <option value="l">L</option>
-                </select>
-                <p>
-                  {`${pizza.price[pizza.size]} €`}
-                </p>
-                <button type="button" onClick={(event) => cartHandler(event, pizza)} >KAUFEN KAUFEN KAUFEN</button>
+            </div>
+            <div className="pizza-element">
+              <select onChange={(event)=> sizeHandler(event, pizza)} id="size">
+                <option value="m">M</option>
+                <option value="s">S</option>
+                <option value="l">L</option>
+              </select>
+              <p>
+                {`${pizza.price[pizza.size]} €`}
+              </p>
+              <button type="button" onClick={(event) => cartHandler(event, pizza)} >Add to Cart</button>
             </div>
           </div>
        ) })}        
