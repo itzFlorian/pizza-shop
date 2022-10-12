@@ -10,7 +10,7 @@ const Search = ({setSearchList, pizzas, setInput, input}) => {
     <div className="search">
       <form onChange={event => changeHandler(event)}>
         <label htmlFor="search">Search for your pizza: </label>
-        <input type="text" id="search" value={input} />
+        <input type="text" id="search" />
       </form>
     </div>
   );

@@ -24,7 +24,7 @@ const ShoppingCart = () => {
             <div>
               <p>{item.pizza}</p>
               <p>Size: {item.size}</p>
-              <p>Quantity: {item.quantity}</p>
+              {item.quantity > 1 && <p>Quantity: {item.quantity}</p>}
               {item.quantity !== 1 && <p>Each: {`${item.price[item.size]} €`}</p>}
               <p>Total: {`${item.price[item.size] * item.quantity} €`}</p>
               <button onClick={(event) => removeHandler(event, item)}>löschen</button>

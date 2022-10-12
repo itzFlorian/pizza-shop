@@ -1,9 +1,4 @@
-const ShowPizza = ({pizza, sizeHandler, cartHandler, quantityInput, setQuantityInput}) => {
-
-  const quantityHandler = (event)=>{
-    const quantity = event.target.value
-    setQuantityInput(quantity)
-  }
+const ShowPizza = ({pizza, quantityHandler, sizeHandler, cartHandler, quantityInput}) => {
 
   return (
     <div className="pizza-container">
@@ -17,7 +12,7 @@ const ShowPizza = ({pizza, sizeHandler, cartHandler, quantityInput, setQuantityI
           <option value="s">Small</option>
           <option value="l">Large</option>
         </select>
-        <input type="number" id="quantity" min="1" placeholder="quantity" value={quantityInput} onChange={event => quantityHandler(event)}/>
+        <input type="number" id="quantity"  placeholder="quantity" defaultValue={quantityInput} onChange={event => quantityHandler(event, pizza)}/>
         <p>{`${pizza.price[pizza.size]} €`}</p>
         <button type="button" onClick={(event) => cartHandler(event, pizza)} >Add to Cart</button>
       </div>

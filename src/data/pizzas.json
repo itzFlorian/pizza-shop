@@ -1,7 +1,9 @@
 [
   {
+    "id": 1,
     "pizza": "Margherita",
     "size": "m",
+    "quantity":1, 
     "price":{
       "s": 5,
       "m": 6,
@@ -10,8 +12,10 @@
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgoldbelly.imgix.net%2Fuploads%2Fproduct_image%2Fimage%2F52447%2Fclassic-neapolitan-pizza-4-pack.dcc1fdf3fe402431e72dc2a0d49a2be8.jpg%3Fixlib%3Drails-3.0.2%26url_params%3D%257B%3Aw%3D%253E1200%2C%2520%3Ah%3D%253E630%2C%2520%3Afit%3D%253E%2522crop%2522%257D&f=1&nofb=1&ipt=f75e67e1d9271a2aa0bb4f71cb0e9040b369e9fc552367aa97f46e9190a383a9&ipo=images"
   },
   {
+    "id": 2,
     "pizza": "Salami",
     "size": "m",
+    "quantity":1, 
     "price":{
       "s": 5,
       "m": 6,
@@ -20,8 +24,10 @@
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.readersdigest.ca%2Fwp-content%2Fuploads%2F2010%2F12%2Fpepperoni-pizza-scaled.jpg&f=1&nofb=1&ipt=ef95591eabf769c0c9b0eb0b9574974e1750d93e4ecd94fcb5fc6b6f5876e140&ipo=images"
   },
   {
+    "id": 3,
     "pizza": "Tonno",
     "size": "m",
+    "quantity":1, 
     "price":{
       "s": 5,
       "m": 6,
@@ -30,8 +36,10 @@
     "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpizzasabbioni.com%2Fwp-content%2Fuploads%2F2019%2F06%2FPizza-al-Tonno-klein.jpg&f=1&nofb=1&ipt=8517eceb857023fc3fd9dd9d06f97c097661336161702b243cc1bfe95db2648a&ipo=images"
   },
   {
+    "id": 4,
     "pizza": "Speciale",
     "size": "m",
+    "quantity":1, 
     "price":{
       "s": 5,
       "m": 6.50,
@@ -40,8 +48,10 @@
     "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fya-restaurant.com%2Fgik555%2F2017%2F07%2Fpizza-special1.jpg&f=1&nofb=1&ipt=a167f202b4b913856fc1e666efe7d4bf88f8f1e911311f588df62105fd1956f2&ipo=images"
   },
   {
+    "id": 5,
     "pizza": "Pepperoni",
     "size": "m",
+    "quantity":1, 
     "price":{
       "s": 5,
       "m": 7,
