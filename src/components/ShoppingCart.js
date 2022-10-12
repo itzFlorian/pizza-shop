@@ -19,20 +19,22 @@ const ShoppingCart = () => {
         return (
           <div className="cart-container">
             <div>
-              <p>{item.pizza}</p>
-              <p>size: {item.size}</p>
-              <p>quantity: {item.quantity}</p>
-              <p>price for each: {`${item.price[item.size]} €`}</p>
-              <p>total: {`${item.price[item.size] * item.quantity} €`}</p>
               <img className="pizza-img" src={item.img} alt="pizza" />
             </div>
             <div>
+              <p>{item.pizza}</p>
+              <p>Size: {item.size}</p>
+              <p>Quantity: {item.quantity}</p>
+              {item.quantity !== 1 && <p>Each: {`${item.price[item.size]} €`}</p>}
+              <p>Total: {`${item.price[item.size] * item.quantity} €`}</p>
               <button onClick={(event) => removeHandler(event, item)}>löschen</button>
             </div>
           </div>
         )
       })}
-      <h2>Total: {sum.toFixed(2)} €</h2>      
+      <h2>Order: {sum.toFixed(2)}</h2>
+      <h2>Delivery: 2€</h2>
+      <h2>Total: {(sum + 2).toFixed(2)} €</h2>      
     </> 
   ): <h1>Cart is empty</h1>
 };

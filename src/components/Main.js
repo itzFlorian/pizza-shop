@@ -22,7 +22,7 @@ const Main = () => {
     event.preventDefault()
     const newCart = [...cart, pizza]
     setCart(newCart)
-    console.log(newCart);
+    alert("Wurde dem Warenkorb hinzugefügt!")
   }  
 
   return input === "" ? (

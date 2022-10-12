@@ -30,6 +30,8 @@ ul{
   justify-content: space-around;
 }
 .cart-container{
+  display: flex;
+  gap:45px;
   text-align: center;
   border:1px solid black;
   border-radius: 8px;
