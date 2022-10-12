@@ -10,12 +10,12 @@ const Main = () => {
   const [pizzas, setPizzas] = useState(pizzaList)
   const [cart, setCart] = useContext(CartContext)
   const [input, setInput] = useState("")
+  const [quantityInput, setQuantityInput] = useState(0)
 
   const sizeHandler = (event, pizza) => {
     const size = event.target.value
-    const newPizzaList = pizzas.map(pizzaItem => pizzaItem === pizza ? {...pizzaItem, size:size} : pizzaItem )
-    setPizzas(newPizzaList) 
-    console.log(newPizzaList);
+    const newPizzaList = pizzas.map(pizzaItem => pizzaItem === pizza ? {...pizzaItem, size:size, quantity: quantityInput === 0 ? 1 : quantityInput} : pizzaItem )
+    setPizzas(newPizzaList)
   }
 
   const cartHandler = (event, pizza)=>{
@@ -28,12 +28,12 @@ const Main = () => {
   return input === "" ? (
     <>
     <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>
-      {pizzas.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler}/> )}       
+      {pizzas.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler} quantityinput={quantityInput} setQuantityInput={setQuantityInput}/> )}       
     </>
   ) : (    
   <>
    <Search pizzas={pizzas} searchList={searchList} setSearchList={setSearchList} input={input} setInput={setInput}/>
-      {searchList.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler}/> )}   
+      {searchList.map(pizza => <ShowPizza pizza={pizza} sizeHandler={sizeHandler} cartHandler={cartHandler} quantityinput={quantityInput} setQuantityInput={setQuantityInput}/> )}   
   </>)
 };
 
