@@ -35,7 +35,7 @@ ul{
   margin:0;
   background: linear-gradient(45deg, rgba(226,192,124,1) 13%, rgba(190,148,64,1) 100%);
 }
-a{
+ul a{
   color:black;
   cursor: pointer;
   text-decoration: none;
