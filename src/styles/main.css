@@ -4,9 +4,46 @@
   justify-content: center;
   margin:50px;
 }
+body{
+  min-height:100vh
+}
+input, select, button{
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin:10px;
+  box-shadow: 2px 2px 8px 1px rgba(0 0 0 /0.4);
 
+}
+button{
+  cursor: pointer;
+}
+button:active{
+  box-shadow: inset 2px 2px 8px 1px rgba(0 0 0 /0.4);
+
+}
+body{
+  background: linear-gradient(45deg, rgba(113,112,110,1) 13%, rgba(65,64,62,1) 100%);
+  font-size: 1.3rem;
+  color:white;
+  height: 100%
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding:30px;
+  margin:0;
+  background: linear-gradient(45deg, rgba(226,192,124,1) 13%, rgba(190,148,64,1) 100%);
+}
+a{
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
 .pizza-img{
   width: 250px;
+  height: 250px;
   border-radius: 8px;
 }
 .pizza-container{
@@ -16,6 +53,8 @@
   padding: 25px;
   margin:0 auto 25px auto;
   width: fit-content;
+  background: linear-gradient( 45deg, rgb(90, 90, 90), rgb(134, 133, 133));
+  box-shadow: 3px 3px 8px 5px rgba(0 0 0 /0.4);
 }
 .pizza-element{
   display:flex;
@@ -24,12 +63,9 @@
   align-items: center;
   margin:25px;
 }
-ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
+
 .cart-container{
+  height:100%;
   display: flex;
   gap:45px;
   text-align: center;
@@ -39,7 +75,15 @@ ul{
   min-width: fit-content;
   width: 50%;
   padding:25px 50px;
+  background: linear-gradient( 45deg, rgb(90, 90, 90), rgb(134, 133, 133));
+  box-shadow: 3px 3px 8px 5px rgba(0 0 0 /0.4);
+  align-items: center;
+  justify-content: space-evenly;
+  gap:150px
 }
+/* .cart-container .pizza-img{
+  justify-self: flex-start;
+} */
 h1, h2{
   text-align: center;
 }

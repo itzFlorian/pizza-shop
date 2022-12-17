@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const menuItems = ["main","contact", "shopping-cart"]
+const menuItems = ["contact", "main", "shopping-cart"]
 const Header = () => {
   return (
     <div>
